@@ -1,0 +1,48 @@
+<view class="container2">
+
+<view class="img_wrap" bindtap="uploads">
+    <image class="img_src" src="{{ img }}" mode='aspectFit'/>
+</view>
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始转换</button>
+</view>
+
+<!--<button bindtap="uploads" class="up">拍照/选取图片识别</button>-->
+<view wx:if='{{img_result}}'>
+  <view class="solids-bottom text-xl padding">
+    <text class="text-black ">照片分析结果如下所示：</text>
+  </view>
+  <view class="img_wrap" bindtap="preview" data-url="{{ img_result }}">
+      <image class="img_src" src="{{ img_result }}" mode='aspectFit'/>
+  </view>
+</view>
+
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >你好~{{userInfo.nickName}}：宫崎骏动画里的新垣结衣见过没？这个开源动漫生成器让你的照片秒变手绘日漫。随手拍张照片，顺势转换为宫崎骏、新海诚等日漫大师的手绘风格作品。</text>
+</view>
+
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      请先点击灰色框，选择要转换的照片
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>转换中，请稍等...</view>
+</view>
+
+</view>
+

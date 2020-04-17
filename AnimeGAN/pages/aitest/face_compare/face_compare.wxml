@@ -1,0 +1,53 @@
+<view class="container2">
+
+<view class="img_wrap" bindtap="uploads" data-idx="1">
+    <image class="img_src" src="{{ img1 }}" mode='aspectFit'/>
+</view>
+
+<view class="img_wrap" bindtap="uploads" data-idx="2">
+    <image class="img_src" src="{{ img2 }}" mode='aspectFit'/>
+</view>
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始分析</button>
+</view>
+
+<!--<button bindtap="uploads" class="up">拍照/选取图片识别</button>-->
+
+<view class="solids-bottom text-xl padding">
+  <text class="text-black ">照片分析结果如下所示：</text>
+</view>
+
+
+
+<view style="flex-direction: column;" class=" flex align-center justify-center ">
+  <text class="text-black solid-bottom text-lg padding">相似度：{{score}}</text>
+</view>
+
+<view style="width:90%" class="cu-progress radius margin-bottom">
+  <view class="bg-blue" style="width:{{score}}%;"></view>
+</view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      请先点击灰色框，选择要上传的两张照片，支持生活照、证件照、身份证芯片照、带网纹照四种类型的人脸对比
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
+
+</view>
+

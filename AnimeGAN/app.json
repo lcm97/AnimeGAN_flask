@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/anime/anime",
+    "pages/aitest/face_analysis/face_analysis",
+    "pages/aitest/face_compare/face_compare",
+    "pages/aitest/animal_identify/animal_identify",
+    "pages/aitest/plant_identify/plant_identify",
+    "pages/aitest/wine_identify/wine_identify",
+    "pages/aitest/dishes_identify/dishes_identify",
+    "pages/aitest/idcard_identify/idcard_identify",
+    "pages/aitest/train_ticket/train_ticket",
+    "pages/aitest/license_plate/license_plate",
+    "pages/aitest/sentiment_classify/sentiment_classify",
+    "pages/aitest/comment_tag/comment_tag",
+    "pages/aitest/ecnet/ecnet",
+    "pages/aitest/ailist/ailist",
+    "pages/about/about/about",
+    "pages/about/log/log",
+    "pages/about/test/list",
+    "pages/about/test/filter",
+    "pages/about/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4878A8",
+    "navigationBarTitleText": "AnimeGAN",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#A8A8A8",
+    "selectedColor": "#4878A8",
+    "backgroundColor": "#F0F0F0",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/anime/anime",
+        "text": "组件",
+        "iconPath": "images/tabbar/component.png",
+        "selectedIconPath": "images/tabbar/component_cur.png"
+      },
+      {
+        "pagePath": "pages/aitest/ailist/ailist",
+        "text": "接口",
+        "iconPath": "images/tabbar/basics.png",
+        "selectedIconPath": "images/tabbar/basics_cur.png"
+      },
+      {
+        "pagePath": "pages/about/home/home",
+        "text": "关于",
+        "iconPath": "images/tabbar/about.png",
+        "selectedIconPath": "images/tabbar/about_cur.png"
+      }
+    ]
+  },
+  "debug": false,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

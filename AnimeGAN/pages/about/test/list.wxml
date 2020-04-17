@@ -1,0 +1,5 @@
+<view class="padding margin">
+  <navigator url="filter" class="bg-grey padding radius">
+    <text>filter：blur引起的ios花屏测试</text>
+  </navigator>
+</view>

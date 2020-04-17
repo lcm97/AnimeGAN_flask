@@ -1,0 +1,55 @@
+<view class="container2">
+
+<textarea 
+  class="text_wrap"
+  value="{{text_val}}"
+  bindinput='textInput'
+  maxlength= '511'>
+</textarea>
+
+
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始执行</button>
+</view>
+
+<!--<button bindtap="uploads" class="up">拍照/选取图片识别</button>-->
+
+<view class="solids-bottom text-xl padding">
+  <text class="text-black ">文本执行结果如下所示：</text>
+</view>
+
+<textarea 
+  class="text_wrap"
+  value="{{text_result}}"
+  bindinput='textInput'
+  maxlength= '511'>
+</textarea>
+
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >识别输入文本中有错误的片段，提示错误并给出正确的文本结果。支持短文本、长文本、语音等内容的错误识别，纠错是搜索引擎、语音识别、内容审查等功能更好运行的基础模块之一。</text>
+</view>
+
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      输入的文本框内容为空
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
+
+</view>

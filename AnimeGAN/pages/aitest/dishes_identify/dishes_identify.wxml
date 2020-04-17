@@ -1,0 +1,48 @@
+<view class="container2">
+
+<view class="img_wrap" bindtap="uploads">
+    <image class="img_src" src="{{ img }}" mode='aspectFit'/>
+</view>
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始识别</button>
+</view>
+
+<!--<button bindtap="uploads" class="up">拍照/选取图片识别</button>-->
+
+<view class="solids-bottom text-xl padding">
+  <text class="text-black ">照片分析结果如下所示：</text>
+</view>
+<view style="flex-direction: column;" class=" flex align-center justify-center ">
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">菜名：{{name}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">卡路里：{{calorie}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">置信度：{{probability}}</text>
+</view>
+
+<view class='bg-white margin vertical' wx:if='{{description!=null}}'>
+  <text class="pay-hint-content unellipsis" >{{description}}</text>
+</view>
+
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      请先点击灰色框，选择要上传的照片
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
+
+</view>

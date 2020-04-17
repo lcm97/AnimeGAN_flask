@@ -1,0 +1,51 @@
+<view class="container2">
+
+<textarea 
+  class="text_wrap"
+  value="{{text_val}}"
+  bindinput='textInput'
+  maxlength= '1000'>
+</textarea>
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始执行</button>
+</view>
+
+<view class="solids-bottom text-xl padding">
+  <text class="text-black ">文本执行结果如下所示：</text>
+</view>
+
+<view style="flex-direction: column;" class=" flex align-center justify-center ">
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">情感极性分类结果：{{sentiment}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">分类置信度：{{confidence}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">积极类别概率：{{positive_prob}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">消极类别概率：{{negative_prob}}</text>
+</view>
+
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >对只包含单一主体主观信息的文本，进行自动情感倾向性判断（0消极、1中性、2积极），并给出相应的置信度。为口碑分析、话题监控、舆情分析等应用提供基础技术支持。</text>
+</view>
+
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      输入的文本框内容为空
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
+
+</view>

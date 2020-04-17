@@ -1,0 +1,47 @@
+page{
+background-color:white;
+}
+.container2 {
+  /*margin-top: -110px;*/
+  /*background-image: url("https://www.xsshome.cn/timg.jpg");*/
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.img_wrap {
+    margin-top: 15rpx;
+    width: 720rpx;
+    height: 430rpx;
+    display: flex;
+    background: #e7e7e7;
+    align-items: center;
+    justify-content: center;
+    border: 3rpx dashed #4878A8
+}
+.img_src{
+    width: 720rpx;
+    height: 430rpx;
+}
+
+.msg {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.up {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 微软雅黑;
+  width: 200px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 25px;
+  background-color: rgb(26, 160, 225);
+}

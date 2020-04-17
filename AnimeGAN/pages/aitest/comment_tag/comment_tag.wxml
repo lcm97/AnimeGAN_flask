@@ -1,0 +1,58 @@
+<view class="container2">
+
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker " decode="{{true}}" >
+      请选择评论行业类型：   {{array[index]}}
+    </view>
+</picker>
+
+<textarea 
+  class="text_wrap"
+  value="{{text_val}}"
+  bindinput='textInput'
+  maxlength= '1000'>
+</textarea>
+
+<view class="padding-sm">
+  <button class="cu-btn block bg-blue margin-tb-sm " bindtap="analyze">
+    开始执行</button>
+</view>
+
+<view class="solids-bottom text-xl padding">
+  <text class="text-black ">文本执行结果如下所示：</text>
+</view>
+
+<view style="flex-direction: column;" class=" flex align-center justify-center ">
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">属性词：{{prop}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">描述词：{{adj}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">情感搭配的极性：{{sentiment}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">开始位置：{{begin_pos}}</text>
+  <text style="padding:19rpx" class="text-black solid-bottom text-lg ">结束位置：{{end_pos}}</text>
+</view>
+
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >提取评论句子的关注点和评论观点，并输出评论观点标签及评论观点极性（0表示消极，1表示中性，2表示积极）。</text>
+</view>
+
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-blue"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      输入的文本框内容为空
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
+
+</view>

@@ -1,0 +1,171 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxcf044e399fcffc33",
+	"projectname": "AnimeGAN",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "关于主页",
+					"pathName": "pages/about/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/ailist/ailist",
+					"pathName": "pages/aitest/ailist/ailist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/face_analysis/face_analysis",
+					"pathName": "pages/aitest/face_analysis/face_analysis",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/face_compare/face_compare",
+					"pathName": "pages/aitest/face_compare/face_compare",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/skin_analysis/skin_analysis",
+					"pathName": "pages/aitest/skin_analysis/skin_analysis",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/animal_identify/animal_identify",
+					"pathName": "pages/aitest/animal_identify/animal_identify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/plant_identify/plant_identify",
+					"pathName": "pages/aitest/plant_identify/plant_identify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/wine_identify/wine_identify",
+					"pathName": "pages/aitest/wine_identify/wine_identify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/dishes_identify/dishes_identify",
+					"pathName": "pages/aitest/dishes_identify/dishes_identify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/idcard_identify/idcard_identify",
+					"pathName": "pages/aitest/idcard_identify/idcard_identify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/train_ticket/train_ticket",
+					"pathName": "pages/aitest/train_ticket/train_ticket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/license_plate/license_plate",
+					"pathName": "pages/aitest/license_plate/license_plate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/ecnet/ecnet",
+					"pathName": "pages/aitest/ecnet/ecnet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/sentiment_classify/sentiment_classify",
+					"pathName": "pages/aitest/sentiment_classify/sentiment_classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aitest/comment_tag/comment_tag",
+					"pathName": "pages/aitest/comment_tag/comment_tag",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}
