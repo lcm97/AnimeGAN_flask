@@ -12,7 +12,7 @@
 <!--<button bindtap="uploads" class="up">拍照/选取图片识别</button>-->
 <view wx:if='{{img_result}}'>
   <view class="solids-bottom text-xl padding">
-    <text class="text-black ">照片分析结果如下所示：</text>
+    <text class="text-black ">照片转换结果如下所示：</text>
   </view>
   <view class="img_wrap" bindtap="preview" data-url="{{ img_result }}">
       <image class="img_src" src="{{ img_result }}" mode='aspectFit'/>
@@ -20,7 +20,7 @@
 </view>
 
 <view class='bg-white margin vertical' >
-  <text class="pay-hint-content unellipsis" >你好~{{userInfo.nickName}}：宫崎骏动画里的新垣结衣见过没？这个开源动漫生成器让你的照片秒变手绘日漫。随手拍张照片，顺势转换为宫崎骏、新海诚等日漫大师的手绘风格作品。</text>
+  <text class="pay-hint-content unellipsis" >Hi{{userInfo.nickName}}：宫崎骏动画里的新垣结衣见过没？这个开源动漫生成小程序让你的照片秒变手绘日漫。随手拍张照片，顺势转换为宫崎骏、新海诚等日漫大师的手绘风格作品。</text>
 </view>
 
 
@@ -41,8 +41,8 @@
 <view class='cu-load load-modal' wx:if="{{loadModal}}">
   <!-- <view class='cuIcon-emojifill text-orange'></view> -->
   <image src='/images/logo_small.png' class='png' mode='aspectFit'></image>
-  <view class='blue-text'>转换中，请稍等...</view>
+  <view class='blue-text'>转换中...</view>
 </view>
-
+<canvas canvas-id="canvas" style="width:{{cWidth}}px;height:{{cHeight}}px;position: absolute;left:-1000px;top:-1000px;"></canvas>
 </view>
 

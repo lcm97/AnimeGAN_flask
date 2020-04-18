@@ -27,6 +27,11 @@
   <text class="pay-hint-content unellipsis" >{{description}}</text>
 </view>
 
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >该服务用于识别红酒标签，即对于输入的一张图片（可正常解码，长宽比适宜，且酒标清晰可见），输出图片中的红酒名称、国家、产区、酒庄、类型、糖分、葡萄品种、酒品描述等信息。可识别数十万中外常见红酒。注意：图片中酒标要清晰可见</text>
+</view>
+
+
 <view class="cu-modal {{modalName=='Modal'?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white justify-end">

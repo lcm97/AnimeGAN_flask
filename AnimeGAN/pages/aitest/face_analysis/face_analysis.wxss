@@ -45,3 +45,18 @@ background-color:white;
   border-radius: 25px;
   background-color: rgb(26, 160, 225);
 }
+.pay-hint-content{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+.unellipsis{
+  -webkit-line-clamp:0; 
+  opacity: 1 
+}

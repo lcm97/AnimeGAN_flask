@@ -13,7 +13,7 @@
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/lcm97/AnimeGAN_flask">
         <text class="cuIcon-github text-blue"></text>
         <text class="text-grey">GitHub</text>
       </view>
@@ -50,4 +50,6 @@
     </view>
   </view>
   <view class="cu-tabbar-height"></view>
+  
+  <text class="copyright">GNU General Public License Retr0 All Rights Reserved.</text>
 </scroll-view>

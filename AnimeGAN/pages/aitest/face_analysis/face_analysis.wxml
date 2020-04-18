@@ -24,7 +24,9 @@
   <text style="padding:19rpx" class="text-black solid-bottom text-lg ">种族：{{race}}</text>
   <text style="padding:19rpx" class="text-black solid-bottom text-lg ">人数：{{face_num}}</text>
 </view>
-
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >检测图片中的人脸,展示人脸属性信息，如年龄、性别等。典型应用场景：如人脸属性分析，基于人脸关键点的加工分析，人脸营销活动等。检测响应速度，与图片中人脸数量相关，人脸数量较多时响应时间会有些许延长。</text>
+</view>
 
 <view class="cu-modal {{modalName=='Modal'?'show':''}}">
   <view class="cu-dialog">

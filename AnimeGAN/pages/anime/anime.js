@@ -4,7 +4,7 @@ Page({
   data: {
     img: '/images/upload_img.png',
     img_result: '',
-    server_url: 'https://www.lovenana.site',
+    server_url: 'your server url',
 
     userInfo: {},
     hasUserInfo: false,
@@ -54,11 +54,64 @@ Page({
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
+      sourceType: ['album'],
       success: function (res) {
-        that.setData({
-          img: res.tempFilePaths[0],
+        wx.showLoading({
+          title: '图片压缩中...',
         })
+        //压缩图片
+        wx.getImageInfo({
+          src: res.tempFilePaths[0],
+          success:function(res){
+            //-------利用canvas压缩图片--------
+            var ratio = 2;
+            var canvasWidth = res.width //图片原始长宽
+            var canvasHeight = res.height
+            while (canvasWidth > 850 || canvasHeight > 850) {// 保证宽高在850以内
+              canvasWidth = Math.trunc(res.width / ratio)
+              canvasHeight = Math.trunc(res.height / ratio)
+              ratio++;
+            }
+            that.setData({
+              cWidth: canvasWidth,
+              cHeight: canvasHeight
+            })
+            //----------绘制图形并取出图片路径--------------
+            var ctx = wx.createCanvasContext('canvas')
+            ctx.drawImage(res.path, 0, 0, canvasWidth, canvasHeight)
+            ctx.draw(false, setTimeout(function () {
+              wx.canvasToTempFilePath({
+                canvasId: 'canvas',
+                destWidth: canvasWidth,
+                destHeight: canvasHeight,
+                success: function (res) {
+                  console.log(res.tempFilePath)//最终图片路径
+                  that.setData({
+                    img: res.tempFilePath,
+                  })
+                  wx.hideLoading()
+                },
+                fail: function (res) {
+                  console.log(res.errMsg)
+                }
+              })
+            }, 100))    //留一定的时间绘制canvas
+          },
+          fail: function (res) {
+            console.log(res.errMsg)
+          },
+
+        })
+    
+
+
+
+
+
+
+
+
+
       },
     })
   },
@@ -76,6 +129,7 @@ Page({
         filePath: that.data.img,
         name: 'file',
         success(res) {
+          console.log(res.data)
           var img_result = that.data.server_url + '/results/' + res.data
           that.setData({
             img_result: img_result,
@@ -109,11 +163,28 @@ Page({
       urls: [val.currentTarget.dataset.url]
     })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-
-  }
+    return {
+      title: 'AnimeGAN',
+      path: '/pages/anime/anime',
+      success: function (res) {
+        if (res.errMsg == 'shareAppMessage:ok') {
+          wx.showToast({
+            title: '分享成功',
+            icon: 'success',
+            duration: 2000
+          });
+        }
+      },
+      fail: function (res) {
+        if (res.errMsg == 'shareAppMessage:fail cancel') {
+          wx.showToast({
+            title: '分享取消',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }
+    }
+  },
 })

@@ -22,6 +22,9 @@
 <view class='bg-white margin vertical' wx:if='{{description!=null}}'>
   <text class="pay-hint-content unellipsis" >{{description}}</text>
 </view>
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。</text>
+</view>
 
 
 <view class="cu-modal {{modalName=='Modal'?'show':''}}">

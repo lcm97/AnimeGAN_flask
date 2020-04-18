@@ -19,7 +19,7 @@ Page({
     console.log(val)
     wx.chooseImage({
       count: 1,
-      sizeType: ['compressed'],
+      sizeType: ['original','compressed'],
       sourceType: ['album', 'camera'],
       success: function (res) {
         that.setData({

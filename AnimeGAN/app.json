@@ -35,13 +35,13 @@
     "list": [
       {
         "pagePath": "pages/anime/anime",
-        "text": "组件",
+        "text": "首页",
         "iconPath": "images/tabbar/component.png",
         "selectedIconPath": "images/tabbar/component_cur.png"
       },
       {
         "pagePath": "pages/aitest/ailist/ailist",
-        "text": "接口",
+        "text": "扩展",
         "iconPath": "images/tabbar/basics.png",
         "selectedIconPath": "images/tabbar/basics_cur.png"
       },

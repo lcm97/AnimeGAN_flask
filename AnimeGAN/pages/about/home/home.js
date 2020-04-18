@@ -16,8 +16,8 @@ Page({
   },
   showQrcode() {
     wx.previewImage({
-      urls: ['https://image.weilanwl.com/color2.0/zanCode.jpg'],
-      current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
+      urls: ['https://yourserverurl/results/zanCode.jpg/'],
+      current: 'https://yourserverurl/results/zanCode.jpg/' // 当前显示图片的http链接      
     })
   },
   CopyLink(e) {
@@ -30,5 +30,29 @@ Page({
         })
       }
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'AnimeGAN',
+      path: '/pages/anime/anime',
+      success: function (res) {
+        if (res.errMsg == 'shareAppMessage:ok') {
+          wx.showToast({
+            title: '分享成功',
+            icon: 'success',
+            duration: 2000
+          });
+        }
+      },
+      fail: function (res) {
+        if (res.errMsg == 'shareAppMessage:fail cancel') {
+          wx.showToast({
+            title: '分享取消',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }
+    }
   },
 })

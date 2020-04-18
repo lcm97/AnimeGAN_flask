@@ -45,3 +45,11 @@ map,.mapBox{
   width: 750rpx;
   height: 300rpx;
 }
+text.copyright{
+  font-size: 20rpx;
+  color: #999999;
+  text-align: center;
+  width: 100%;
+  margin-left: 130rpx;
+  margin-bottom: 30rpx;
+}

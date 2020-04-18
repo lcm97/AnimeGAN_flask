@@ -29,6 +29,10 @@
   <view class="bg-blue" style="width:{{score}}%;"></view>
 </view>
 
+<view class='bg-white margin vertical' >
+  <text class="pay-hint-content unellipsis" >比对两张图片中人脸的相似度，并返回相似度分值。支持生活照、证件照、身份证芯片照、带网纹照四种类型的人脸对比。</text>
+</view>
+
 <view class="cu-modal {{modalName=='Modal'?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white justify-end">

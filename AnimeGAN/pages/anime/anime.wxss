@@ -23,7 +23,8 @@ background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100%
     background: #e7e7e7;
     align-items: center;
     justify-content: center;
-    border: 3rpx dashed #4878A8
+    border: 3rpx dashed #4878A8;
+    border-radius: 15rpx;
 }
 .img_src{
     width: 720rpx;

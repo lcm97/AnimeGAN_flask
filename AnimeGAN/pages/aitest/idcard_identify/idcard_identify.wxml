@@ -24,7 +24,7 @@
 </view>
 
 <view class='bg-white margin vertical' >
-  <text class="pay-hint-content unellipsis" >支持对二代居民身份证正反面所有8个字段进行结构化识别，包括姓名、性别、民族、出生日期、住址、身份证号、签发机关、有效期限，识别准确率超过99%</text>
+  <text class="pay-hint-content unellipsis" >支持对二代居民身份证正面所有8个字段进行结构化识别，包括姓名、性别、民族、出生日期、住址、身份证号、签发机关、有效期限，识别准确率超过99%</text>
 </view>
 
 
